@@ -13,9 +13,51 @@ const cover = document.getElementById("cover");
 const musicNameContainer = document.getElementById("music-name-container");
 
 // song title
-const songs = ["hey", "summer", "ukulele"];
+const songs = [
+  "hey",
+  "summer",
+  "ukulele",
+  "18_Saal",
+  "Aankh_Micholi",
+  "Bhula_Dunga_x_Dil_Todne_Se_Pehle",
+  "Bhull_Jayin_Na",
+  "bollywood_Alone - Awaara",
+  "Broken_Heart - Nawab",
+  "Check_it_Out",
+  "Dard-E-Dil Song Panther",
+  "Desi Dan Bilzerian_320(PagalWorldl)",
+  "Dil De Diya Hai (Slowed And Reverb)",
+  "Ek Baar To Radha Bankar Dekho",
+  "Fallin Apart - Karan Aujla",
+  "Fark - Gippy Grewal",
+  "Gani (Slowed Reverb)",
+  "Hasti Rahe Tu",
+  "Heartbroken",
+  "Hon Nhi Dena",
+  "I m Better Now",
+  "In Love Again",
+  "INSTASAMKA - Отключаю телефон",
+  "Ishq De Fanniyar - Lofi",
+  "Ishqaa Tera - Akhil",
+  "Kehar-Harvi",
+  "Mahiya-X-Bohemia",
+  "Dil (Slowed - Reverb)",
+  "Majbooriya - Nazz",
+  "Mehrama",
+  "Mi Amor (Slowed Reverb",
+  "Never lie to me i dont wanna cry",
+  "O-Bedardeya-Rap-Version",
+  "Oh Kyu Ni Jaan Ske - Ninja",
+  "Roothe Roothe - Harjas",
+  "Saanson Ko - Arijit Singh",
+  "Sajjna Ft. Bhinda Aujla - Bobby Layal",
+  "Screen",
+  "Shaamat (LoFi Mix)",
+  "Sirhaana",
+  "Still Rollin",
+  "Zile Zile Mile Mile Song",
+];
 const songsLength = songs.length;
-
 // keep track of song
 let songIndex = 1;
 
@@ -24,7 +66,7 @@ updateSongName();
 
 function updateSongName() {
   songs.forEach((item, index) => {
-    const songName = item;
+    const songName = item.replace("_", " ");
     const currentSongIndex = index;
     let li = document.createElement("li");
     li.innerHTML = songName;
@@ -44,8 +86,8 @@ loadSong(songs[songIndex]);
 
 // update song details
 function loadSong(song) {
-  title.innerText = song;
-  musicName.innerText = song;
+  title.innerText = song.replace("_", " ");
+  musicName.innerText = song.replace("_", " ");
   audio.src = `music/${song}.mp3`;
   cover.src = `images/${song}.jpg`;
 }

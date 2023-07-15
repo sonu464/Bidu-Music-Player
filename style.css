@@ -162,3 +162,26 @@ body {
   text-align: center;
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  .main-container h1 {
+    width: inherit;
+  }
+
+  .music-container {
+    width: inherit;
+  }
+
+  .music-list {
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    width: 100%;
+    margin-top: 15%;
+  }
+
+  .img-container img {
+    width: 225px;
+    height: 225px;
+  }
+}

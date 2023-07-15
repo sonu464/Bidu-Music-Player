@@ -56,6 +56,7 @@ const songs = [
   "Sirhaana",
   "Still Rollin",
   "Zile Zile Mile Mile Song",
+  "Dil",
 ];
 const songsLength = songs.length;
 // keep track of song
